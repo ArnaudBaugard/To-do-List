@@ -15,7 +15,7 @@ else if($_GET['action'] == 'update'){
 	$query="UPDATE task SET name=:name, date=:date WHERE id=:id";
 	$prep=$pdo->prepare($query);
 	$prep->bindValue(':name', $_GET['name']);
-	$prep->bindValue(':date', '2019-03-05 00:00:00');
+	$prep->bindValue(':date', $_GET['date']);
 	$prep->bindValue(':id', $_GET['id']);
 	$prep->execute();
     //header("Location:../index.php");
