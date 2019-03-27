@@ -24,6 +24,7 @@ Voici la liste des différentes fonctionnalités présentes :
 * Ajout des tâches
 * Modification des tâches (et de la date)
 * Suppression des tâches
+* Un service reprenant les 3 fonctionnalités précédentes
 * Pop up de confirmation de suppression
 * Fonctionnalités en AJAX
 
