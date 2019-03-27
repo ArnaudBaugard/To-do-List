@@ -1,5 +1,4 @@
 $(function() {
-	console.log("ici");
 	Todo();
 	
 	function Todo(){
@@ -128,10 +127,10 @@ $(function() {
             modal.style.display = "none";
         });
 		
-		//var inputDate = document.createElement("input");
-		//inputDate.setAttribute("type", "datetime-local");
-		//inputDate.setAttribute("id", "newDate");
-		//contenu[0].appendChild(inputDate);
+		var inputDate = document.createElement("input");
+		inputDate.setAttribute("type", "datetime-local");
+		inputDate.setAttribute("id", "newDate");
+		contenu[0].appendChild(inputDate);
 		
 		
 		var input = document.createElement("input");
@@ -144,7 +143,7 @@ $(function() {
 		valider = document.getElementsByClassName("validate");
         valider[0].addEventListener("click", function (e) {
 			var newTask = document.getElementById("newId").value;
-			//var newDate = document.getElementById("newDate").value;
+			var newDate = document.getElementById("newDate").value;
 			modal.style.display = "none";
 		
 		$.ajax({
@@ -152,7 +151,7 @@ $(function() {
 			url : "./includes/service.php",
 			data : {id : id,
 					name : newTask,
-					//date : newDate,
+					date : newDate,
 					action : "update"
 					},
 			datatype : "json",
